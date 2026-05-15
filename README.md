@@ -1,20 +1,24 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Cyber-Project
 
-# Run and deploy your AI Studio app
+A secure document locker web application built for cyber security testing and secure file management.
 
-This contains everything you need to run your app locally.
+## Features
+- User authentication
+- Secure file upload and storage
+- Folder management
+- File sharing
+- Activity & audit logs
+- Input validation against attacks (SQL Injection, XSS)
 
-View your app in AI Studio: https://ai.studio/apps/5427dde9-560d-4e52-99a5-e996b67d58ed
+## Tech Stack
+- React
+- TypeScript
+- Node.js
+- Supabase
+- Tailwind CSS
 
-## Run Locally
+## Installation
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+npm run dev
