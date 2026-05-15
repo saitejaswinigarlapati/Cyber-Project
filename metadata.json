@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: Secure Document Locker",
+  "description": "A production-quality full-stack document management system with JWT authentication, folder hierarchy, and secure file uploads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

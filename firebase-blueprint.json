@@ -1,0 +1,59 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile metadata",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email", "name"]
+    },
+    "Folder": {
+      "title": "Folder",
+      "description": "A directory in the locker",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "user_id": { "type": "string" },
+        "parent_id": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "user_id"]
+    },
+    "File": {
+      "title": "File",
+      "description": "A file stored in the locker",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "original_name": { "type": "string" },
+        "mime_type": { "type": "string" },
+        "size": { "type": "number" },
+        "path": { "type": "string" },
+        "user_id": { "type": "string" },
+        "folder_id": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "original_name", "mime_type", "size", "path", "user_id"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile collection"
+    },
+    "/folders/{folderId}": {
+      "schema": "Folder",
+      "description": "Folders collection"
+    },
+    "/files/{fileId}": {
+      "schema": "File",
+      "description": "Files collection"
+    }
+  }
+}
